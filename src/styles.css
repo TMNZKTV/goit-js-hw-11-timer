@@ -17,4 +17,21 @@ body {
    * CSS image reference example.
    */
   background-image: url('./images/bg-pattern.png');
+
+  font-size: 30px;
+}
+
+.timer {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+.field:not(:last-child) {
+  margin-right: 10px;
+}
+
+div > span.value {
+  margin-right: 10px;
+  font-weight: 900;
+  color: red;
 }
