@@ -66,16 +66,14 @@ let secs;
 // Из deltaTime высчитаем время для отображения
 function calculateTime(time) {
   days = pad(Math.floor(time / (1000 * 60 * 60 * 24)));
-  updateClockFace(days);
 
   hours = pad(Math.floor((time % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)));
-  updateClockFace(hours);
 
   mins = pad(Math.floor((time % (1000 * 60 * 60)) / (1000 * 60)));
-  updateClockFace(mins);
 
   secs = pad(Math.floor((time % (1000 * 60)) / 1000));
-  updateClockFace(secs);
+
+  updateClockFace(days, hours, mins, secs);
 }
 
 // Функция для отображения чисел в виде "00"
